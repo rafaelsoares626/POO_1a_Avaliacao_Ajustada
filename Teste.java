@@ -4,23 +4,23 @@ class Main {
     
         System.out.println("__________________________________________________");
         System.out.println("Cor original");
-        CoresRGB cor1 = new CoresRGB(37, 150, 7);
-        cor1.imprimir();
+        CoresRGB cor1 = new CoresRGB(37, 150, 190);
+        System.out.println(cor1.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Cópia da cor original");
         CoresRGB corCopia = new CoresRGB(cor1);
-        corCopia.imprimir();
+        System.out.println(corCopia.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Segunda cópia da cor original");
         CoresRGB corCopia2 = new CoresRGB(cor1);
-        corCopia2.imprimir();
+        System.out.println(corCopia2.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Cor preta");
         CoresRGB corPreta = new CoresRGB();
-        corPreta.imprimir();
+        System.out.println(corPreta.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Verificando se a cor cópia é igual à cor original");
@@ -33,61 +33,61 @@ class Main {
         System.out.println("__________________________________________________");
         System.out.println("Clareando a cor cópia em 10%");
         corCopia.clarearTonalidade(0.1);
-        corCopia.imprimir();
+        System.out.println(corCopia.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Escurecendo a cor original em 10%");
         cor1.escurecerTonalidade(0.1);
-        cor1.imprimir();
+        System.out.println(cor1.toString());
         System.out.println("");
         System.out.println("Cor preta escurecida");
         corPreta.escurecerTonalidade(0.1);
-        corPreta.imprimir();
+        System.out.println(corPreta.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Criando uma nova instância igual à cor original (já escurecida)");        
         CoresRGB cor2 = cor1.novaInstancia();
-        cor2.imprimir();
+        System.out.println(cor2.toString());
         
-        /*System.out.println("__________________________________________________");
+        System.out.println("__________________________________________________");
         System.out.println("Teste para criar cor com componentes negativos");
         CoresRGB cor3 = new CoresRGB(-37, -150, -190);
-        cor3.imprimir();
+        System.out.println(cor3.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Teste para criar cor com componentes maiores que 255");
         CoresRGB cor4 = new CoresRGB(256, 300, 350);
-        cor4.imprimir();*/
+        System.out.println(cor4.toString());
 
         System.out.println("__________________________________________________");
         System.out.println("Criando uma cor PRETA");        
         CoresRGB corPRETA = CoresRGB.PRETA;
-        corPRETA.imprimir();
+        System.out.println(corPRETA.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Criando uma cor BRANCA");        
         CoresRGB corBRANCA = CoresRGB.BRANCA;
-        corBRANCA.imprimir();
+        System.out.println(corBRANCA.toString());
 
         System.out.println("__________________________________________________");
         System.out.println("Criando uma cor RED");        
         CoresRGB corRED = CoresRGB.RED;
-        corRED.imprimir();
+        System.out.println(corRED.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Criando uma cor GREEN");        
         CoresRGB corGREEN = CoresRGB.GREEN;
-        corGREEN.imprimir();
+        System.out.println(corGREEN.toString());
         
         System.out.println("__________________________________________________");
         System.out.println("Criando uma cor BLUE");        
         CoresRGB corBLUE = CoresRGB.BLUE;
-        corBLUE.imprimir();
+        System.out.println(corBLUE.toString());
 
         System.out.println("__________________________________________________");
         System.out.println("Criando uma cor em equivalente cinza");        
         CoresRGB corCinza = corCopia2.novaInstanciaCinza(corCopia2);
-        corCinza.imprimir();
+        System.out.println(corCinza.toString());
         
         System.out.println("#################### Fim teste ####################");        
         System.out.println(" ");
@@ -235,7 +235,7 @@ class Main {
         
         System.out.println("É fragmento?");        
         System.out.println(imagemPrincipal.fragmentoImagens(imagemFragmento));
-        System.out.println("");  
+        System.out.println("");
     }
 }
 
