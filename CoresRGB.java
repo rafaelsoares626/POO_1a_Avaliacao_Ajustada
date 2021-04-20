@@ -132,12 +132,9 @@ public class CoresRGB
         CoresRGB coresNovo = new CoresRGB(this.getRed(), this.getGreen(), this.getBlue());
         return coresNovo;
     }
-    //Imprimir
-    public void imprimir(){
-        System.out.println("Red: " + this.getRed());
-        System.out.println("Green: " + this.getGreen());
-        System.out.println("Blue: " + this.getBlue());
-        System.out.println("Luminosidade: " + this.getLuminosidade());
-        System.out.println("Hexadecimal: " + this.hexadecimal());
+    //Mostrar na tela
+    @Override
+    public String toString() {
+        return "Red: " + this.getRed() + "\nGreen: " + this.getGreen() + "\nBlue: " + this.getBlue() + "\nLuminosidade: " + this.getLuminosidade() + "\nHexadecimal: " + this.hexadecimal();
     }
 }
