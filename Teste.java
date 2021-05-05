@@ -92,12 +92,13 @@ class Main {
         System.out.println("#################### Fim teste ####################");        
         System.out.println(" ");
         System.out.println("################## Teste Imagem ###################");        
-        
+
         System.out.println("__________________________________________________");
         System.out.println("Criando uma Imagem BRANCA");        
         Imagem imagem1 = new Imagem(5, 3);//new Imagem(altura, largura)
-        imagem1.mostrarImagem();
+        System.out.println(imagem1.mostrarImagem());
         
+
         System.out.println("__________________________________________________");
         System.out.println("Modificando pixels da Imagem, dado o pixel");
         CoresRGB pixel1 = new CoresRGB(37, 150, 190);
@@ -107,7 +108,7 @@ class Main {
         imagem1.modificarPixel(1, 0, pixel1);
         imagem1.modificarPixel(1, 1, pixel1);
         imagem1.modificarPixel(1, 2, pixel1);
-        imagem1.mostrarImagem();
+        System.out.println(imagem1.mostrarImagem());
         
         System.out.println("__________________________________________________");
         System.out.println("Modificando pixels da Imagem, dados os valores RGB");
@@ -117,7 +118,7 @@ class Main {
         imagem1.modificarPixel(3, 0, 37, 150, 190);
         imagem1.modificarPixel(3, 1, 37, 150, 190);
         imagem1.modificarPixel(3, 2, 37, 150, 190);
-        imagem1.mostrarImagem();
+        System.out.println(imagem1.mostrarImagem());
         
         System.out.println("__________________________________________________");
         System.out.println("Comparando duas Imagens. Elas são iguais?"); 
@@ -130,11 +131,11 @@ class Main {
         System.out.println("Criando uma imagem em escala cinza");     
         
         System.out.println("Original");
-        imagem1.mostrarHexadecimal(); 
+        System.out.println(imagem1.toHexadecimal()); 
         System.out.println("");
         System.out.println("Cinza");
         Imagem imagemC = imagem1.equivalenteCinza();//imagem1
-        imagemC.mostrarHexadecimal();
+        System.out.println(imagemC.toHexadecimal());
         
         System.out.println("__________________________________________________");
         System.out.println("Verificando se uma imagem é fragmento de outra"); 
@@ -186,10 +187,10 @@ class Main {
         imagemFragmento.modificarPixel(2, 2, 54, 167, 208);
         
         System.out.println("Imagem principal");
-        imagemPrincipal.mostrarHexadecimal(); 
+        System.out.println(imagemPrincipal.toHexadecimal()); 
         System.out.println("");
         System.out.println("Imagem fragmento nº1");
-        imagemFragmento.mostrarHexadecimal();
+        System.out.println(imagemFragmento.toHexadecimal());
         System.out.println("");
         System.out.println("É fragmento?");        
         System.out.println(imagemPrincipal.fragmentoImagens(imagemFragmento));
@@ -210,10 +211,10 @@ class Main {
         imagemFragmento2.modificarPixel(2, 2, 39, 152, 193);
         
         System.out.println("Imagem principal");
-        imagemPrincipal.mostrarHexadecimal(); 
+        System.out.println(imagemPrincipal.toHexadecimal()); 
         System.out.println("");
         System.out.println("Imagem fragmento nº2");
-        imagemFragmento2.mostrarHexadecimal();
+        System.out.println(imagemFragmento2.toHexadecimal());
         System.out.println("");
         System.out.println("É fragmento?");        
         System.out.println(imagemPrincipal.fragmentoImagens(imagemFragmento2));
@@ -226,11 +227,11 @@ class Main {
         System.out.println("Imagem principal duplamente rotacionada"); 
         Imagem imagemDupRot = imagemPrincipal.rotacionar();
         imagemDupRot = imagemDupRot.rotacionar();
-        imagemDupRot.mostrarHexadecimal();
+        System.out.println(imagemDupRot.toHexadecimal());
         
         System.out.println("");        
         System.out.println("Imagem fragmento nº1");
-        imagemFragmento.mostrarHexadecimal();
+        System.out.println(imagemFragmento.toHexadecimal());
         System.out.println("");
         
         System.out.println("É fragmento?");        

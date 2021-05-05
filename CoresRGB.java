@@ -24,15 +24,11 @@ public class CoresRGB
     //v. construtores sobrecarregados que permitam a criação de uma cor
     //vi. um construtor de cópia, que crie uma cor idêntica (mesmo valor de R, G e B)
     public CoresRGB(CoresRGB cores){
-        this.setRed(cores.red);
-        this.setGreen(cores.green);
-        this.setBlue(cores.blue);        
+        this(cores.getRed(), cores.getGreen(), cores.getBlue());       
     }
     //vii. um construtor sem parâmetros, que crie a cor preta (<R=0, G=0, B=0>)
     public CoresRGB(){                     
-        this.setRed(0);
-        this.setGreen(0);
-        this.setBlue(0); 
+        this(0, 0, 0);
     }
     //viii. um construtor que receba três valores como parâmetros e crie uma considerando estes valores como os valores de R, G e B, respectivamente
     public CoresRGB(int red, int green, int blue){

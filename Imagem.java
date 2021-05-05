@@ -141,24 +141,36 @@ public class Imagem
         }        
         return imagemRotacionada;
     }   
-    //Mostrar a imagem
-    public void mostrarImagem(){
-        int i, j;
-        for(i = 0; i < this.pixel.length; i++){
-            for(j = 0; j < this.pixel[0].length; j++){
-                System.out.print(this.pixel[i][j].getLuminosidade());
+    //Mostrar a imagem    
+    public String mostrarImagem() {
+        String s = "";
+        for(int k = 0; k < this.pixel.length; k++)
+        {
+            for(int w = 0; w < this.pixel[k].length; w++)
+            {
+                if(w == 0){
+                    s = s + "\n" + this.pixel[k][w].getLuminosidade();
+                }else{
+                    s = s + this.pixel[k][w].getLuminosidade();
+                }
             }
-            System.out.println("");
         }
+        return s;
     }
-    //Mostrar hexadecimal
-    public void mostrarHexadecimal(){
-        int i, j;
-        for(i = 0; i < this.pixel.length; i++){
-            for(j = 0; j < this.pixel[0].length; j++){
-                System.out.print(this.pixel[i][j].hexadecimal());
+    //Mostrar a imagem em hexadecimal
+    public String toHexadecimal() {
+        String s = "";
+        for(int k = 0; k < this.pixel.length; k++)
+        {
+            for(int w = 0; w < this.pixel[k].length; w++)
+            {
+                if(w == 0){
+                    s = s + "\n" + this.pixel[k][w].hexadecimal();
+                }else{
+                    s = s + this.pixel[k][w].hexadecimal();
+                }
             }
-            System.out.println("");
         }
+        return s;
     }
 }
