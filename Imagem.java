@@ -142,12 +142,10 @@ public class Imagem
         return imagemRotacionada;
     }   
     //Mostrar a imagem    
-    public String mostrarImagem() {
+    public String mostrarImagem(){
         String s = "";
-        for(int k = 0; k < this.pixel.length; k++)
-        {
-            for(int w = 0; w < this.pixel[k].length; w++)
-            {
+        for(int k = 0; k < this.pixel.length; k++){
+            for(int w = 0; w < this.pixel[k].length; w++){
                 if(w == 0){
                     s = s + "\n" + this.pixel[k][w].getLuminosidade();
                 }else{
@@ -160,10 +158,8 @@ public class Imagem
     //Mostrar a imagem em hexadecimal
     public String toHexadecimal() {
         String s = "";
-        for(int k = 0; k < this.pixel.length; k++)
-        {
-            for(int w = 0; w < this.pixel[k].length; w++)
-            {
+        for(int k = 0; k < this.pixel.length; k++){
+            for(int w = 0; w < this.pixel[k].length; w++){
                 if(w == 0){
                     s = s + "\n" + this.pixel[k][w].hexadecimal();
                 }else{
